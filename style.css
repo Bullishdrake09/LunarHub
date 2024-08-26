@@ -7,45 +7,29 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-}
-
-.logo h1 {
-    color: #8E2DE2;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #8E2DE2;
-}
-
+/* Animated Background */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('assets/images/background.jpg') no-repeat center center/cover;
+    background: linear-gradient(45deg, #8E2DE2, #4A00E0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     position: relative;
     text-align: center;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero::after {
