@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Hub</title>
+    <link rel="stylesheet" href="../css/download.css">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Lunar Hub</h1>
+            <p>Experience the new era of design and animation.</p>
+            <button class="btn">Get Started</button>
+        </section>
+        <section class="features">
+            <h2>Features</h2>
+            <div class="text-area">
+                <p>
+                   Working on good tools, fast service, we are contastently improving!
+                </p>
+            </div>
+        </section>
+        <section class="download">
+            <h2>Download Now</h2>
+            <button class="btn">Download</button>
+        </section>
+    </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const textArea = document.querySelector('.text-area p');
+      textArea.style.animation = 'typing 4s steps(40, end), blink-caret 0.75s step-end infinite';
+    });
+    </script>
+</body>
+</html>

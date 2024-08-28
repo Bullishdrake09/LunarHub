@@ -1,0 +1,228 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: #FFFFFF;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: #8E2DE2;
+    font-size: 1.75rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+    margin-right: 20px; 
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #8E2DE2;
+    box-shadow: 0 0 10px #8E2DE2, 0 0 20px #8E2DE2;
+}
+
+
+.cta-button {
+    padding: 8px 15px;
+    background-color: #8E2DE2;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.875rem;
+    box-shadow: 0 0 15px rgba(142, 45, 226, 0.5);
+}
+
+.cta-button:hover {
+    background-color: #7400B8;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #8E2DE2, 0 0 30px #8E2DE2;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 70px; 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 30px rgba(142, 45, 226, 0.7); 
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero-content:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7), 0 0 40px rgba(142, 45, 226, 0.9);
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    text-shadow: 0 0 20px #8E2DE2;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.live-count {
+    margin-top: 20px;
+}
+
+#discord-count {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8E2DE2;
+    text-shadow: 0 0 10px #8E2DE2, 0 0 20px #8E2DE2, 0 0 30px #8E2DE2, 0 0 40px #7400B8, 0 0 50px #7400B8, 0 0 60px #7400B8, 0 0 70px #7400B8;
+}
+
+
+footer {
+    padding: 20px 40px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #CCCCCC;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.875rem;
+    border-top: 1px solid #333;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; 
+}
+
+footer a {
+    color: #8E2DE2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #7400B8;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #CCCCCC;
+}
+
+.footer-content p + p {
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0; 
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px 15px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+
+    footer {
+        padding: 10px 10px;
+        font-size: 0.75rem;
+    }
+}
